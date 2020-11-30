@@ -20,7 +20,7 @@
 								<div class="q-display p-3">
 									<i class="fa fa-quote-left mr-3"></i>
 									<p class="d-inline">
-										{{ questionText }}
+										{{ questionText|raw }}
 									</p>
 									<p class="pt-4">
 										<strong>--Tisha</strong>
@@ -49,7 +49,7 @@
 							<img src="{{ asset('images/tisha.png') }}" width="50" height="50" alt="Tisha avatar">
 						</div>
 						<div class="mr-3 pt-2">
-							{{ answer }}
+							{{ answer|markdown }}
 							<p>-- Mallory</p>
 						</div>
 						<div class="vote-arrows flex-fill pt-2 js-vote-arrows" style="min-width: 90px;">

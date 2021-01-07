@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 use Psr\Log\LoggerInterface;
-
+use Sentry\State\HubInterface;
 
 class QuestionController extends AbstractController
 {
@@ -45,7 +45,7 @@ class QuestionController extends AbstractController
         if ($this->isDebug) {
             $this->logger->info('We are in debug mode!');
         }
-
+        
         $answers = [
             'Make sure your cat is sitting `purrrfectly` still 🤣',
             'Honestly, I like furry shoes better than MY cat',
